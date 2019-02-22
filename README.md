@@ -69,13 +69,12 @@ Por ultimo para que la aplicación se pueda conectar a MySQL necesitamos configu
 
 ---
 
-[!] -----------------------ATENCIÓN--------------------------
+## Atención
 
-[-] El proyecto está pensado para correr en pantallas grandes con una resolución de 1920x1080
-[-] Ha sido probado con resoluciones más pequeñas como 1366x768 comportandose bien
-[-] Recomendamos usar Firefox o Chrome como navegador que son los navegadores en los que ha sido probado
-[!] Asegura haber configurado todas las bases de datos
-[:] El juego es solo una beta, no me queda tiempo para programar más minijuegos y mecánicas
-
+- El proyecto está pensado para correr en pantallas grandes con una resolución de 1920x1080
+- Ha sido probado con resoluciones más pequeñas como 1366x768 comportandose bien
+- Recomendamos usar Firefox o Chrome como navegador que son los navegadores en los que ha sido probado
+- Asegura haber configurado todas las bases de datos
+- El juego es solo una beta, no me queda tiempo para programar más minijuegos y mecánicas
 
 ---
