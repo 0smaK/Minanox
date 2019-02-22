@@ -11,11 +11,13 @@ Está desarrollado en JavaScript tanto para el back-end como el
 front-end intentando seguir las pautas de EcmaScript6 pero al final 
 todo queda en un codigo espagueti gigante...
 
-*****************************************************************************************************************
+***
 
 ## Instalación:
 
-¿Qué necesitamos?
+### ¿Qué necesitamos?
+
+---
 
 ### Tener instalado node.js y npm
   
@@ -25,24 +27,25 @@ todo queda en un codigo espagueti gigante...
   [npm](https://www.npmjs.com/)
   
   **linux:**
-    Arch: `# pacman -S nodejs npm`
-    Debian, Ubuntu: `# apt-get install nodejs npm`
+    Arch: **$**`sudo pacman -S nodejs npm`
+    Debian, Ubuntu: **$**`sudo apt-get install nodejs npm`
 
 ### Dependencias de node.js
 
   `npm i express express-handlebars express-session mysql express-mysql-session morgan bcryptjs passport passport-local connect-flash express-validator`
 
-### Tener instalado MySQL o mariaDB e iniciar servicios, puedes usar phpmyadmin para facilitarlo
+### Tener instalado MySQL o mariaDB e iniciar servicios
+*puedes usar phpmyadmin para facilitarlo*
 
 **Arch:** 
-```bash
+```
 sudo pacman -S mariadb
 sudo mysql_install_db
 sudo systemctl enable mysqld
 sudo systemctl start mysqld
 ```
 **Debian:** 
-```bash
+```
 sudo apt-get update
 sudo apt-get -y install mariadb-server mariadb-client
 sudo mysql_secure_installation
