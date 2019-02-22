@@ -1,0 +1,96 @@
+<span class="tiempo esconder">POR CULPA DEL ÚLTIMO ATAQUE LA MAQUINA SE HA BLOQUEADO<br>Prueba dentro de <span
+        id="tiempo" style="background-color:crimson;color:white;padding:5px;border-radius:5px;">x
+        horas</span><br></span>
+<span class="hackpy esconder"> <span style="color:lime;">
+        <span class="coffeetaker esconder">COFFEETAKER 1.1</span><br>
+        <span class="busc esconder"><span style="color:white;">[*]</span> BUSCANDO CÓDIGO ADMIN DE LA MÁQUINA DE
+            CAFÉ</span> <br><br>
+        <span class="exec esconder"><span style="color:white;">[-]</span> EJECUTANDO SCRIPT COFFEEBRUTE...</span><br>
+        <span class="prob0 esconder"><span style="color:white;">[*]</span> PROBANDO CÓDIGO:</span> <br>
+        <span class="fail0 esconder"><span style="color:white;">[!]</span><span style="color:crimson"> CÓDIGO
+                ERRONEO!!!</span></span> <br>
+        <span class="prob1 esconder"><span style="color:white;">[*]</span> PROBANDO CÓDIGO:</span> <br>
+        <span class="fail1 esconder"><span style="color:white;">[!]</span><span style="color:crimson"> CÓDIGO
+                ERRONEO!!!</span></span> <br>
+        <span class="prob2 esconder"><span style="color:white;">[*]</span> PROBANDO CÓDIGO:</span> <br>
+        <span class="fail2 esconder"><span style="color:white;">[!]</span><span style="color:crimson"> CÓDIGO
+                ERRONEO!!!</span></span> <br>
+        <span class="prob3 esconder"><span style="color:white;">[*]</span> PROBANDO CÓDIGO:</span>
+        <br><br>
+        <span class="codfound esconder" style="color:gold">
+            ================================<br>
+            &nbsp;[+] CODIGO ENCONTRADO: <span id="coddd"></span><br>
+            ================================<br><br>
+        </span>
+        <span class="wonec esconder"><span style="color:white;">[+]</span> +100 etsisiCoins</span><br>
+        <span class="woncaf esconder"><span style="color:white;">[+]</span> +100 cafeina</span><br>
+        <span class="wonskin esconder"><span style="color:white;">[+]</span> skin aleatoria</span><br>
+
+    </span><br></span>
+
+<script>
+    let com = "{{id}}";
+    var lastLoot = "{{lastLoot}}";
+    lastLoot = new Date(lastLoot);
+    var nextLoot = new Date(lastLoot);
+    nextLoot.setHours(nextLoot.getHours() + 5);
+
+    var ahora = new Date();
+    var fecha = ahora.getFullYear() + '-' + (ahora.getMonth() + 1) + '-' + ahora.getDate();
+    var hora = ahora.getHours() + ":" + ahora.getMinutes() + ":" + ahora.getSeconds();
+    ahora = fecha + ' ' + hora;
+    ahora = new Date(ahora);
+
+    var lootear = false;
+
+    if (ahora > nextLoot) {
+        lootear = true;
+        $.ajax({
+            url: '/loot',
+            type: 'POST',
+            data: { ahora: ahora }
+        }).done(function (data) {
+            console.log(data);
+        });
+    } else {
+        if (com == "python hack.py" || com == "python%20hack.py") {
+            lootear = false;
+            var timeLeft = Math.floor(((nextLoot - ahora) / 3600000) * 100) / 100;
+            $("#tiempo").text(timeLeft + " horas");
+            $(".tiempo").removeClass("esconder");
+            $(".hackpy").addClass("esconder");
+        }
+    }
+
+    if (lootear) {
+        $(".prob0").text("PROBANDO CÓDIGO: " + Math.floor((Math.random() * 999999) + 100000));
+        $(".prob1").text("PROBANDO CÓDIGO: " + Math.floor((Math.random() * 999999) + 100000));
+        $(".prob2").text("PROBANDO CÓDIGO: " + Math.floor((Math.random() * 999999) + 100000));
+        let codd = Math.floor((Math.random() * 999999) + 100000);
+        $(".prob3").text("PROBANDO CÓDIGO: " + codd);
+        $("#coddd").text(codd);
+        if (com == "python hack.py" || com == "python%20hack.py") {
+            window.setTimeout("quitarEsconder('.coffeetaker');", 500);
+            window.setTimeout("quitarEsconder('.busc');", 1000);
+            window.setTimeout("quitarEsconder('.exec');", 1300);
+            window.setTimeout("quitarEsconder('.prob0');", 1400);
+            window.setTimeout("quitarEsconder('.fail0');", 1500);
+            window.setTimeout("quitarEsconder('.prob1');", 1600);
+            window.setTimeout("quitarEsconder('.fail1');", 1700);
+            window.setTimeout("quitarEsconder('.prob2');", 1800);
+            window.setTimeout("quitarEsconder('.fail2');", 1900);
+            window.setTimeout("quitarEsconder('.prob3');", 2000);
+            window.setTimeout("quitarEsconder('.codfound');", 2500);
+            window.setTimeout("quitarEsconder('.youwon');", 2800);
+            window.setTimeout("quitarEsconder('.wonec');", 2900);
+            window.setTimeout("quitarEsconder('.woncaf');", 3000);
+            window.setTimeout("quitarEsconder('.wonskin');", 3100);
+        }
+    } else {
+
+    }
+
+    function quitarEsconder(idd) {
+        $(idd).removeClass("esconder");
+    }
+</script>

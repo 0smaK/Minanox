@@ -1,0 +1,38 @@
+<div class="modal fade" id="games" tabindex="-1" role="dialog" aria-labelledby="cafe" aria-hidden="true"
+    style="font-family: 'Ubuntu Mono', monospace;">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h3>Minijuegos disponibles: </h3>
+                <p>Juega a los diferentes Minijuegos para ganar etsisiCoins y picarte con tus amigos</p>
+                <hr>
+                <div class="card card-skins">
+                    <div class="card-body">
+                        <h5 class="card-title gTitle">MIÑANOX CLICKER</h5>
+                        <span style="color:chartreuse">Mejor jugador: {{bestPlayer}} | {{Maxpuntuacion}} puntos</span>
+                        <p class="card-text">Gana etsisiCoins clickando a tu miñano!!</p>
+                        <a href="/play/mClicker" id="play_mc" class="btn btn-outline-info btn-block">Jugar (-20 cafeina)</a>
+                        <script> var ca = "{{caffeine}}"; if(ca<20) $("#play_mc").addClass("disabled"); else $("#play_mc").removeClass("disabled"); </script>
+                    </div>
+                </div>
+                <hr>
+                <div class="card card-skins">
+                    <div class="card-body">
+                        <h5 class="card-title gTitle">TIC TAC TOE <span class="badge badge-danger">No disponible</span></h5>
+                        <p class="card-text">Juega contra tu miñanox al tic tac toe</p>
+                        <a href="#" class="btn btn-outline-info disabled btn-block">Jugar</a>
+                    </div>
+                </div>
+                <hr>
+                <div class="card card-skins">
+                    <div class="card-body">
+                        <h5 class="card-title gTitle">MIÑANOX RUNNER <span class="badge badge-danger">No disponible</span></h5>
+                        <p class="card-text">Minijuego de plataformas, esquiva todos los obstaculos y llega lo más lejos que puedas!</p>
+                        <a href="#" class="btn btn-outline-info disabled btn-block">Jugar</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>

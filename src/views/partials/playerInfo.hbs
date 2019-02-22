@@ -1,0 +1,24 @@
+<div class="playerInfo">
+    <div class="tituloTerminal">
+        <p class="tituloTerminal">play3r1NF0 · M1Ñ4N0X-T3RM</p>
+    </div>
+    <div class="terminalPadding">
+        {{>termPart}} whoami<br>
+        <span style="color:gold">{{usuario}}</span><br>
+        <br>
+        {{>termPart}} python miñanox.py --caffeine -u {{usuario}}<br>
+        Tienes <span style="color:gold;font-size:18px">{{etsisiCoins}}</span> etsisiCoins<br>
+        <br>
+        {{>termPart}} python miñanox.py --etsisiCoins -u {{usuario}}<br>
+        Porcentaje de cafeina: <span style="color:gold;font-size:18px">{{caffeine}}%</span><br>
+        <br>
+        <!-- esto es para rellenar hueco que quedaba vacio -->
+        {{>termPart}} vim miñanox.py<br>
+        <span style="color:crimson">ERROR!</span> Comando deshabilitado porque luego no sabes salir<br>
+        <br>
+        {{>termPart}} ./dailyQuote.sh | cowsay<br>
+        <pre style="color:cornsilk">
+            {{>cow}}
+            </pre><br>
+    </div>
+</div>

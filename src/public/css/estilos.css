@@ -1,0 +1,225 @@
+body.game{
+    background-image: url('../res/img/bg_main_rotonda.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+body.minclick{
+    background:linear-gradient(0deg,rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.8)),url('../res/img/bg_main.jpg') no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+body.cafe{
+    background-image: url('../res/img/bg_main_cafe.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.cs-logo{
+    color:gold;
+    font-size: 10pt;
+    font-family: "Courier New", Monospace;
+    white-space: pre;
+}
+.esconder{
+    display:none;
+}
+.introducirTerm{
+    bottom:20px;
+    position: absolute;
+    display: inline-block;
+}
+.termInfo{
+    float:left;
+}
+.term-input{
+    float:right;
+    border: none;
+    border-bottom: 0.85px solid cyan;
+    width: 250px;
+    background-color: transparent;
+    margin-left:15px;
+    color:cyan;
+}
+
+.cafeTerm{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.90);
+    display: table-cell;
+    font-family: 'Ubuntu Mono', monospace;
+    color:aqua;
+    font-size: 22px;
+    padding-top:15px;
+    padding-left:15px;
+}
+
+.toolbox{
+    transition: all .2s ease-in-out;
+}
+.toolbox:hover{
+    transform: translate(0,-15px);
+}
+.toolbox-g{
+    bottom: 100px;
+    position: relative;
+    margin-left:50%;
+    transform: translate(-200px);
+}
+.toolbox-g,.toolbox{
+    display: flex;
+    position: absolute;
+}
+.margin_tb1{
+    margin-left:72px;
+}
+.margin_tb2{
+    margin-left:171px;
+}
+.margin_tb3{
+    margin-left:270px;
+}
+
+.bgnegro-st{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.colorblanco{
+    color: white;
+}
+
+.minano{
+    width: 350px;
+    height: auto;
+    position: fixed;
+    top: 50%;
+    left:50%;
+    
+}
+
+div.playerInfo{
+    width: 30%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    border: solid cyan 2px;
+    border-radius: 2px;
+    right: 0;
+    color:aqua;
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+div.terminalPadding{
+    padding-left:20px;
+    padding-top:15px;
+}
+
+span.playerInfo{
+    color: #009999;
+}
+
+span.decoracionTerm{
+    color:#00ffff;
+}
+
+.tooltip{
+    margin-bottom: 16px!important;
+}
+.tooltip-inner{
+    color:cyan!important;
+}
+
+div.tituloTerminal{
+    background-color:aqua;
+    color:black;
+    width: 100%;
+    font-size: 22px;
+    padding-top:0;
+    padding-left:0;
+    text-align: center;
+}
+
+@keyframes respiracion {
+    0% { transform: scale(1) translate(-50%, -50%); }
+    25% { transform: scale(1.02) translate(-50%, -50%); }
+    50% { transform: scale(1.03) translate(-50%, -50%); }
+    75% { transform: scale(1.02) translate(-50%, -50%); }
+    100% { transform: scale(1) translate(-50%, -50%); }
+}
+
+.respiracion {
+    animation-name: respiracion;
+    animation-duration: 5000ms;
+    transform-origin:70% 70%;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.card-skins:hover{
+    border-radius:10px;
+    border:2px solid cyan;
+}
+
+.tbback{
+    margin-left:20px;
+    bottom:20px;
+    z-index:5000;
+    position:fixed;
+    width:50px;
+    height:auto;
+}
+.imgtbb:hover{
+    border: 3px solid cyan;
+}
+.imgtbb{border: 3px solid black;}
+
+
+.blur{
+    filter: blur(3px);
+    border:0!important;
+}
+
+.gTitle{
+    color:gold;
+}
+
+.card-skins{
+    padding-top:20px;
+    background-color:transparent!important;
+}
+.card-skins-body{
+    text-align:center;
+}
+
+.skin-tit{
+    font-size:18px;
+}
+.skin-desc{
+    font-size: 12px;
+}
+
+.modal-content{
+    background-color: rgba(0, 0, 0, 0.85)!important;
+    color:aqua;
+}
+.modal-header{
+    border-bottom: 1px solid aqua!important;
+}
+.modal-footer{
+    border-top: 1px solid aqua!important;
+}

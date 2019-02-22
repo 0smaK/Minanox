@@ -1,0 +1,47 @@
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+        integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/css/minClicker.css">
+    <script src="/js/minClicker.js"></script>
+</head>
+        <div class="coin esconder">
+            <img src="/res/img/spr_coin.png" width="60px">
+            <span id="loot">+10 etsisiCoins</span>
+        </div>
+
+        <a href="/play" class="tbback"><img class="imgtbb" src="/res/img/toolbox_back.png"></a>
+<body class="minclick">
+    <section class="contenidoprincipal">
+
+        <div class="centrar">
+            <center>
+                <div class="minScore centrar">
+                    <h2>Puntuación: <span id="mincount">0</span></h2>
+                    <h2>Record: <span id="record">{{highScore}}</span></h2>
+                    <br><br><br><br>
+                </div>
+            </center>
+            <img src="/res/img/spr_miñano_default.png" id="skin_miñano" class="">
+        </div>
+    </section>
+    {{>setSkin}}
+
+    <audio id="moneda">
+        <source src="/res/sfx/sfx_coin.ogg">
+        </source>
+    </audio>
+    <script>
+        function PlaySound(soundobj) {
+            var moneda = document.getElementById(soundobj);
+            moneda.play();
+        }
+
+        function StopSound(soundobj) {
+            var moneda = document.getElementById(soundobj);
+            moneda.pause();
+            moneda.currentTime = 0;
+        }
+    </script>
+</body>

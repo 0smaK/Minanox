@@ -1,0 +1,39 @@
+<center>
+    <div class="toolbox-g">
+        <img class="toolbox margin_tb1" width="100px" height="auto" src="/res/img/toolbox_games.png"
+            onmouseover="PlaySound('sonidoMenu')" onmouseout="StopSound('sonidoMenu')" data-target="#games" data-toggle="modal" data-tooltip="tooltip" 
+            data-placement="top" title="Minijuegos">
+        <!--<img class="toolbox margin_tb1" width="100px" height="auto" src="/res/img/toolbox_shell.png"
+            onmouseover="PlaySound('sonidoMenu');" onmouseover="this.tooltip('show')"
+            onmouseout="StopSound('sonidoMenu')" data-toggle="tooltip" data-placement="top" title="M1Ñ4N0X<>T3RM">-->
+        <a href="/cafe"><img class="toolbox margin_tb2" width="100px" height="auto" src="/res/img/toolbox_cafe.png"
+            onmouseover="PlaySound('sonidoMenu')" onmouseout="StopSound('sonidoMenu')" data-toggle="tooltip"
+            data-placement="top" title="Máquina de café"></a>
+        <img class="toolbox margin_tb3" data-target="#cafe" data-toggle="modal" data-tooltip="tooltip" width="100px" height="auto" src="/res/img/toolbox_skin.png"
+            onmouseover="PlaySound('sonidoMenu')" onmouseout="StopSound('sonidoMenu')"
+            data-placement="top" title="Cambiar Skin">
+    </div>
+</center>
+
+<audio id="sonidoMenu">
+    <source src="/res/sfx/sfx_menu.ogg">
+    </source>
+</audio>
+<script>
+    function PlaySound(soundobj) {
+        var sonidomenu = document.getElementById(soundobj);
+        sonidomenu.play();
+    }
+
+    function StopSound(soundobj) {
+        var sonidomenu = document.getElementById(soundobj);
+        sonidomenu.pause();
+        sonidomenu.currentTime = 0;
+    }
+
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+
+    $('[data-tooltip="tooltip"]').tooltip();
+</script>

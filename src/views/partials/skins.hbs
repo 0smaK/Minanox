@@ -1,0 +1,164 @@
+<form id="deepfried" action="/play" method="post">
+    <input type="text" name="skin" value="deepfried" style="display:none;">
+</form>
+<form id="default" action="/play" method="post">
+    <input type="text" name="skin" value="default" style="display:none;">
+</form>
+<form id="whitebear" action="/play" method="post">
+    <input type="text" name="skin" value="whitebear" style="display:none;">
+</form>
+<form id="miñor" action="/play" method="post">
+    <input type="text" name="skin" value="miñor" style="display:none;">
+</form>
+<form id="miñand" action="/play" method="post">
+    <input type="text" name="skin" value="miñand" style="display:none;">
+</form>
+<form id="minor" action="/play" method="post">
+    <input type="text" name="skin" value="minor" style="display:none;">
+</form>
+<form id="minand" action="/play" method="post">
+    <input type="text" name="skin" value="minand" style="display:none;">
+</form>
+<form id="miñan420" action="/play" method="post">
+    <input type="text" name="skin" value="miñan420" style="display:none;">
+</form>
+<form id="errorTextura" action="/play" method="post">
+    <input type="text" name="skin" value="errorTextura" style="display:none;">
+</form>
+
+<div class="modal fade" id="cafe" tabindex="-1" role="dialog" aria-labelledby="cafe" aria-hidden="true"
+    style="font-family: 'Ubuntu Mono', monospace;">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+
+                <div class="card-deck">
+
+                    <div class="card card-skins" style="width: 18rem;"
+                        onclick="document.getElementById('default').submit();">
+                        <img src="/res/img/spr_miñano_default.png" class="card-img-top">
+                        <div class="card-body d-flex flex-column card-skins-body">
+                            <h5 class="card-title skin-tit">Miñano Default</h5>
+                            <p class="card-text skin-desc">classic miñano</p>
+                        </div>
+                    </div>
+
+                    <div class="card card-skins {{#unless hasDeepfried}} blur {{/unless}}" style="width: 18rem;"
+                        {{#if hasDeepfried}} onclick="document.getElementById('deepfried').submit();"{{/if}}>
+                        <img src="/res/img/spr_miñano_deepfried.png" class="card-img-top">
+                        <div class="card-body d-flex flex-column card-skins-body">
+                            <h5 class="card-title skin-tit">Miñano Deepfried</h5>
+                            <p class="card-text skin-desc">💯💯💯💯🤣🤣🤣🤣.</p>
+                        </div>
+                    </div>
+
+
+                    <div class="card card-skins {{#unless hasWhiteBear}} blur {{/unless}}" style="width: 18rem;"
+                        {{#if hasWhiteBear}} onclick="document.getElementById('whitebear').submit();" {{/if}}>
+                        <img src="/res/img/spr_miñano_whitebear.png" class="card-img-top">
+                        <div class="card-body d-flex flex-column card-skins-body">
+                            <h5 class="card-title skin-tit">Miñano White Bear</h5>
+                            <p class="card-text skin-desc">Skin con un guiño de la serie Black Mirror.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="card-deck">
+
+                    <div class="card card-skins {{#unless hasMinnanor}} blur {{/unless}}" style="width: 18rem;"
+                        {{#if hasMinnanor}} onclick="document.getElementById('miñor').submit();"{{/if}}>
+                        <img src="/res/img/spr_miñor.png" class="card-img-top">
+                        <div class="card-body d-flex flex-column card-skins-body">
+                            <h5 class="card-title skin-tit">MiñanOR</h5>
+                            <p class="card-text skin-desc">||</p>
+                        </div>
+                    </div>
+
+                    <div class="card card-skins {{#unless hasMinnand}} blur {{/unless}}" style="width: 18rem;"
+                        {{#if hasMinnand}} onclick="document.getElementById('miñand').submit();"{{/if}}>
+                        <img src="/res/img/spr_miñand.png" class="card-img-top">
+                        <div class="card-body d-flex flex-column card-skins-body">
+                            <h5 class="card-title skin-tit">MiñAND</h5>
+                            <p class="card-text skin-desc">&&</p>
+                        </div>
+                    </div>
+
+                    <div class="card card-skins {{#unless hasMinor}} blur {{/unless}}" style="width: 18rem;"
+                        {{#if hasMinor}} onclick="document.getElementById('minor').submit();"{{/if}}>
+                        <img src="/res/img/spr_minor.png" class="card-img-top">
+                        <div class="card-body d-flex flex-column card-skins-body">
+                            <h5 class="card-title skin-tit">Minor</h5>
+                            <p class="card-text skin-desc">!OR</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="card-deck">
+
+                    <div class="card card-skins {{#unless hasMinand}} blur {{/unless}}" style="width: 18rem;"
+                        {{#if hasMinand}} onclick="document.getElementById('minand').submit();"{{/if}}>
+                        <img src="/res/img/spr_minand.png" class="card-img-top">
+                        <div class="card-body d-flex flex-column card-skins-body">
+                            <h5 class="card-title skin-tit">MiNAND</h5>
+                            <p class="card-text skin-desc">!AND</p>
+                            <form id="minand" action="/play" method="post">
+                                <input type="text" name="skin" value="minand" style="display:none;">
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="card card-skins {{#unless hasMinan420}} blur {{/unless}}" style="width: 18rem;"
+                        {{#if hasMinan420}} onclick="document.getElementById('miñan420').submit();"{{/if}}>
+                        <img src="/res/img/spr_miñan420.png" class="card-img-top">
+                        <div class="card-body d-flex flex-column card-skins-body">
+                            <h5 class="card-title skin-tit">Miñan420</h5>
+                            <p class="card-text skin-desc">smoke weed everyday!</p>
+                            <form id="miñan420" action="/play" method="post">
+                                <input type="text" name="skin" value="miñan420" style="display:none;">
+                            </form>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card card-skins {{#unless hasSkinError}} blur {{/unless}}" style="width: 18rem;"
+                       {{#if hasSkinError}}  onclick="document.getElementById('errorTextura').submit();"{{/if}}>
+                        <img src="/res/img/spr_miñano_errorTexture.png" class="card-img-top">
+                        <div class="card-body d-flex flex-column card-skins-body">
+                            <h5 class="card-title skin-tit">SKIN ERROR</h5>
+                            <p class="card-text skin-desc">¿o no?</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="card-deck">
+                    <div class="card card-skins {{#unless hasGitHub}} blur {{/unless}}" style="width: 18rem;"
+                        {{#if hasGitHub}} onclick="document.getElementById('github').submit();"{{/if}}>
+                        <img src="/res/img/spr_miñano_github.png" class="card-img-top">
+                        <div class="card-body d-flex flex-column card-skins-body">
+                            <h5 class="card-title skin-tit">Github Miñano</h5>
+                            <p class="card-text skin-desc">git commit</p>
+                        </div>
+                    </div>
+
+                    <div class=" blur card card-skins" style="width: 18rem;">
+                        <img src="" class="card-img-top">
+                        <div class="card-body d-flex flex-column card-skins-body">
+                            <h5 class="card-title skin-tit"></h5>
+                            <p class="card-text skin-desc"></p>
+                        </div>
+                    </div>
+
+                    <div class=" blur card card-skins" style="width: 18rem;">
+                        <img src="" class="card-img-top">
+                        <div class="card-body d-flex flex-column card-skins-body">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

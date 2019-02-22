@@ -1,0 +1,118 @@
+<head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+        integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body class="cafe">
+    <div class="cafeTerm">
+        <p id="termOutput"> </p>
+        <pre class="cs-logo esconder">{{>cafeshell-logo}}</pre>
+        <span class="bienvenido esconder">BIENVENIDO AL SISTEMA INFORMÁTICO DE LA MÁQUINA DE CAFÉ.<br><br></span>
+
+        <span class="term-output esconder">{{>termPart}} {{id}} <br></span>
+        <span class="help esconder">{{>cafeshell-help}}</span>
+        <span class="ls esconder"> <span style="color:gold;">hack.py</span><br> </span>
+        <span class="buy esconder"> <span style="color:white;">Introduce los parametros <span
+                    style="color:gold;">-c</span> o <span style="color:gold;">-s<br><span style="color:white;">Si
+                        quieres comprar cafe por <span style="color:chartreuse">10 etsisiCoins</span> usa <span
+                            style="color:gold">buy -c cafe</span> <span style="color:crimson">[+40 de
+                            cafeina]</span><br>Si quieres comprar la bebida energetica Black Bull por <span
+                            style="color:chartreuse">20 etsisiCoins</span> usa <span style="color:gold">buy -c bb</span>
+                        <span style="color:crimson">[+85 de cafeina]</span><br>Si quieres comprar una skin aleatoria por
+                        <span style="color:chartreuse">35 etsisiCoins</span><span style="color:gold"> buy
+                            -s</span></span></span></span><br> </span>
+        <span class="buyc esconder"> <span style="color:white;">Si quieres comprar cafe por <span
+                    style="color:chartreuse">10 etsisiCoins</span> usa <span style="color:gold">buy -c cafe</span> <span
+                    style="color:crimson">[+40 de cafeina]</span><br>Si quieres comprar la bebida energetica Black Bull
+                por <span style="color:chartreuse">20 etsisiCoins</span> usa <span style="color:gold">buy -c bb</span>
+                <span style="color:crimson">[+85 de cafeina]</span> </span><br> </span>
+        <span class="buys esconder"> <span style="color:white;">¿Deseas comprar una skin aleatoria por <span
+                    style="color:chartreuse">35 etsisiCoins</span>? [y/n]<br>Dispones de <span
+                    style="color:gold">{{etsisiCoins}} etsisiCoins</span></span></span>
+        <span class="buycc esconder"> <span style="color:white;">¿Deseas comprar un cafe por <span
+                    style="color:chartreuse">10 etsisiCoins</span>? [y/n]<br>Dispones de <span
+                    style="color:gold">{{etsisiCoins}} etsisiCoins</span></span> </span>
+        <span class="buycbb esconder"> <span style="color:white;">¿Deseas comprar un Black Bull por <span
+                    style="color:chartreuse">20 etsisiCoins</span>? [y/n]<br>Dispones de <span
+                    style="color:gold">{{etsisiCoins}} etsisiCoins</span></span> </span>
+                    {{>coffeetaker}}
+       
+        <span class="err esconder"> <span style="color:crimson">ERR!</span> <span style="color:white;">No se ha
+                encontrado el comando {{id}}</span> </span>
+        <span class="errCafe esconder"> <span style="color:crimson">ERR!</span> <span style="color:white;">No tienes
+                etsisiCoins suficientes</span> </span>
+        <form id="coffeeTerm-p" action="/coffeeshell" method="post">
+            <div class="introducirTerm">
+                <div class="termInfo">{{>termPart}}</div> <input autofocus type="text" name="comando"
+                    class="term-input">
+            </div>
+            <input type="submit" style="position: absolute; left: -9999px; width: 1px; height: 1px;" tabindex="-1" />
+        </form>
+    </div>
+
+    <script>
+        let id = "{{id}}";
+
+
+
+        if (id != "") {
+            $(".cs-logo").addClass("esconder");
+            $(".bienvenido").addClass("esconder");
+            $(".help").addClass("esconder");
+            $(".term-output").removeClass("esconder");
+            $(".err").addClass("esconder");
+        } else {
+            console.log("a");
+            window.setTimeout("quitarEsconder('.cs-logo');", 500);
+            window.setTimeout("quitarEsconder('.bienvenido');", 1000);
+            window.setTimeout("quitarEsconder('.help');", 1500);
+        }
+
+        let trmFrm = document.getElementById('coffeeTerm-p') || null;
+        switch (id) {
+            case 'help':
+                $(".help").removeClass("esconder");
+                break;
+            case 'ls':
+                $(".ls").removeClass("esconder");
+                break;
+            case 'buy':
+                $(".buy").removeClass("esconder");
+                break;
+            case 'buy -c':
+                $(".buyc").removeClass("esconder");
+                break;
+            case 'buy -c cafe':
+                $(".buycc").removeClass("esconder");
+                if (trmFrm) {
+                    trmFrm.action = '/coffeeshell-bcc';
+                }
+                break;
+            case 'buy -c bb':
+                $(".buycbb").removeClass("esconder");
+                if (trmFrm) {
+                    trmFrm.action = '/coffeeshell-bcb';
+                }
+                break
+            case 'buy -s':
+                $(".buys").removeClass("esconder");
+                if (trmFrm) {
+                    trmFrm.action = '/coffeeshell-bs';
+                }
+                break
+            case 'errCafe':
+                $(".errCafe").removeClass("esconder");
+                break;
+            case 'python hack.py':
+                $(".hackpy").removeClass("esconder");
+                break;
+            default:
+                if ("{{id}}" != "") $(".err").removeClass("esconder");
+                break;
+        }
+        function quitarEsconder(idd) {
+            $(idd).removeClass("esconder");
+        }
+    </script>
+</body>
