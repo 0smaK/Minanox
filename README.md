@@ -21,14 +21,14 @@ todo queda en un codigo espagueti gigante...
 
 ### Tener instalado node.js y npm
   
-  **Windows:**
-  Instalar a traves de sus páginas oficiales
-  [node.js](https://nodejs.org/en/download/) 
-  [npm](https://www.npmjs.com/)
-  
-  **linux:**
-    - Arch: **$**`sudo pacman -S nodejs npm`
-    - Debian, Ubuntu: **$**`sudo apt-get install nodejs npm`
+**Windows:**
+Instalar a traves de sus páginas oficiales
+[node.js](https://nodejs.org/en/download/) 
+[npm](https://www.npmjs.com/)
+ 
+**linux:**
+- Arch: **$**`sudo pacman -S nodejs npm`
+- Debian, Ubuntu: **$**`sudo apt-get install nodejs npm`
 
 ### Dependencias de node.js
 
