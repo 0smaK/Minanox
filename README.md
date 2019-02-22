@@ -27,8 +27,8 @@ todo queda en un codigo espagueti gigante...
   [npm](https://www.npmjs.com/)
   
   **linux:**
-    Arch: **$**`sudo pacman -S nodejs npm`
-    Debian, Ubuntu: **$**`sudo apt-get install nodejs npm`
+    - Arch: **$**`sudo pacman -S nodejs npm`
+    - Debian, Ubuntu: **$**`sudo apt-get install nodejs npm`
 
 ### Dependencias de node.js
 
