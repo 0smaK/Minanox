@@ -13,7 +13,7 @@ todo queda en un codigo espagueti gigante...
 
 ***
 
-![Miñanox Logo](https://i.imgur.com/q45kuVf.png)
+![Miñanox Logo](https://i.imgur.com/jfJ4awT.png)
 
 
 ## Iniciar servidor y aplicación
