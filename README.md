@@ -23,7 +23,6 @@ todo queda en un codigo espagueti gigante...
 
 ### ¿Qué necesitamos?
 
----
 
 ### Tener instalado node.js y npm
   
