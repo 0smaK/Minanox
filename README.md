@@ -81,3 +81,11 @@ Por ultimo para que la aplicación se pueda conectar a MySQL necesitamos configu
 - El juego es solo una beta, no me queda tiempo para programar más minijuegos y mecánicas
 
 ---
+
+## Screenshots
+![login](https://i.imgur.com/QlKurGu.png)
+![main](https://i.imgur.com/MeXm45V.png)
+![minigames menu](https://i.imgur.com/WDObix5.png)
+![miñanoClicker](https://i.imgur.com/qB97Uez.png)
+![coffeeShell](https://i.imgur.com/r5k7mE8.png)
+![Skin miñAND](https://i.imgur.com/TrmBVXQ.png)
