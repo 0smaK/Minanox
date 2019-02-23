@@ -13,6 +13,12 @@ todo queda en un codigo espagueti gigante...
 
 ***
 
+
+## Iniciar servidor y aplicación
+
+- Abrir un terminal y ejecutar `npm run dev` o el comando asignado en packages.json dentro de './miñanox'
+- Si todo va bien y el puerto 4000 no está en uso, abre tu navegador favorito y abre la url 'localhost:4000'
+
 ## Instalación:
 
 ### ¿Qué necesitamos?
@@ -65,10 +71,13 @@ Por ultimo para que la aplicación se pueda conectar a MySQL necesitamos configu
 
 ---
 
-## Iniciar servidor y aplicación
-
-- Abrir un terminal y ejecutar "npm run dev" o el comando asignado en packages.json dentro de './miñanox'
-- Si todo va bien y el puerto 4000 no está en uso, abre tu navegador favorito y abre la url 'localhost:4000'
+## Screenshots
+![login](https://i.imgur.com/QlKurGu.png)
+![main](https://i.imgur.com/MeXm45V.png)
+![minigames menu](https://i.imgur.com/WDObix5.png)
+![miñanoClicker](https://i.imgur.com/qB97Uez.png)
+![coffeeShell](https://i.imgur.com/r5k7mE8.png)
+![Skin miñAND](https://i.imgur.com/TrmBVXQ.png)
 
 ---
 
@@ -79,13 +88,3 @@ Por ultimo para que la aplicación se pueda conectar a MySQL necesitamos configu
 - Recomendamos usar Firefox o Chrome como navegador que son los navegadores en los que ha sido probado
 - Asegura haber configurado todas las bases de datos
 - El juego es solo una beta, no me queda tiempo para programar más minijuegos y mecánicas
-
----
-
-## Screenshots
-![login](https://i.imgur.com/QlKurGu.png)
-![main](https://i.imgur.com/MeXm45V.png)
-![minigames menu](https://i.imgur.com/WDObix5.png)
-![miñanoClicker](https://i.imgur.com/qB97Uez.png)
-![coffeeShell](https://i.imgur.com/r5k7mE8.png)
-![Skin miñAND](https://i.imgur.com/TrmBVXQ.png)
